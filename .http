@@ -1,0 +1,77 @@
+////////////////////////
+###
+POST http://localhost:3000/cafelabs/saveuser
+Content-Type: application/json
+
+{
+    "Nombre": "Ivan",
+    "Correo": "ivan@gmail.com"
+}
+#####
+GET http://localhost:3000/cafelabs/allusers
+#####
+DELETE http://localhost:3000/cafelabs/deleteuser/650e11210e113f6bf3f17a94
+####
+GET http://localhost:3000/cafelabs/userid/650df98464a7e85e8de56d05
+#####
+PUT http://localhost:3000/cafelabs/updateuser/650df98464a7e85e8de56d05
+Content-Type: application/json
+
+{
+  "Nombre": "ivanDarioTrujilloOtero",
+  "Correo": "otero@gmail.com"
+}
+////////////////////////////
+///Product
+####
+GET http://localhost:3000/cafe/allproducts
+#####
+GET http://localhost:3000/cafe/idproduct/650e47dd22616e9ea338ab08
+####
+POST http://localhost:3000/cafe/saveproduct
+Content-Type: application/json
+
+{
+   "Nombre": "Ivan",
+   "Precio": 200,
+   "Cantidad": 1 
+}
+####
+PUT http://localhost:3000/cafe/updateproduct/650e46c091499dd9119e3cab
+Content-Type: application/json
+
+{
+    "Nombre": "reIvan",
+    "Precio": 700,
+   "Cantidad": 3 
+}
+###
+DELETE http://localhost:3000/cafe/deleteproduct/650e489b43b30ab81fab7875
+/////////////////////////////////
+//Inventario
+####
+GET http://localhost:3000/cafe/allregistro
+#####
+GET http://localhost:3000/cafe/idregistro/650e4ae336cb001d8a8dc366
+####
+POST http://localhost:3000/cafe/saveregisto
+Content-Type: application/json
+
+{
+  "id_Product": "650e461291499dd9119e3ca6",
+  "id_Client": "650df98464a7e85e8de56d05",
+  "clima": "",
+  "cantidad": 2
+}
+###
+PUT http://localhost:3000/cafe/updateregistro/650e4d67e17d4714aad41f6b
+Content-Type: application/json
+
+{
+  "id_Product": "333461291499dd9119e3ca6",
+  "id_Client": "444df98464a7e85e8de56d05",
+  "clima": "relax",
+  "cantidad": 2
+}
+#####
+DELETE http://localhost:3000/cafe/deleteregistro/650e4d67e17d4714aad41f6b
